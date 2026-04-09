@@ -8,9 +8,9 @@ import org.hibernate.cfg.Configuration;
 public class Main {
     public static void main(String[] args) {
         Users u1 = new Users();
-        u1.setAge(20);
-        u1.setName("vishwas");
-//        u1.setuID(1);
+        u1.setAge(29);
+        u1.setName("John");
+        u1.setuID(4);
 
         System.out.println(u1.toString());
 
@@ -21,9 +21,24 @@ public class Main {
         SessionFactory sf = cnf.buildSessionFactory();
         Session session = sf.openSession();
 
-        Transaction transaction = session.beginTransaction();
-        session.persist(u1);
-        transaction.commit();
+//        create operation
+//        Transaction transaction = session.beginTransaction();
+//        session.persist(u1);
+//        transaction.commit();
+
+//        get operation
+//        Users u2 = session.find(Users.class, 2);
+//        System.out.println(u2);
+
+//        update operation
+//        Transaction transaction = session.beginTransaction();
+//        session.merge(u1);
+//        transaction.commit();
+
+//        delete operation
+//        Transaction transaction1 = session.beginTransaction();
+//        session.remove(u1);
+//        transaction1.commit();
 
         session.close();
         sf.close();
