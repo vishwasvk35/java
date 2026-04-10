@@ -8,6 +8,7 @@ public class Users {
     private int uID;
     private String name;
     private int age;
+    private Address address;
 
     public int getuID() {
         return uID;
@@ -21,6 +22,8 @@ public class Users {
         return age;
     }
 
+    public Address getAddress() {return address;}
+
     public void setuID(int uID) {
         this.uID = uID;
     }
@@ -33,12 +36,15 @@ public class Users {
         this.age = age;
     }
 
+    public void setAddress(Address address) {this.address = address;}
+
     @Override
     public String toString() {
         return "users{" +
                 "uID=" + uID +
                 ", name='" + name + '\'' +
                 ", age=" + age +
+                ", address= " + address +
                 '}';
     }
 }

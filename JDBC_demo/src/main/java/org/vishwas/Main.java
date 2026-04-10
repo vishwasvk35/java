@@ -8,9 +8,10 @@ import org.hibernate.cfg.Configuration;
 public class Main {
     public static void main(String[] args) {
         Users u1 = new Users();
-        u1.setAge(29);
-        u1.setName("John");
-        u1.setuID(4);
+        u1.setAge(87);
+        u1.setName("steve");
+        u1.setuID(5);
+        u1.setAddress(new Address("wall street", "manhatten", "new york"));
 
         System.out.println(u1.toString());
 
