@@ -1,6 +1,9 @@
 package org.vishwas;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.CascadeType;
 
 @Entity
 public class Users {
@@ -8,6 +11,8 @@ public class Users {
     private int uID;
     private String name;
     private int age;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "address_aid")
     private Address address;
 
     public int getuID() {
